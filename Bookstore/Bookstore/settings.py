@@ -163,6 +163,6 @@ EMAIL_USE_TLS = 'True'
 # Be sure to read the guide in the resources folder of this lecture (SETUP THE EMAIL BACKEND)
 
 EMAIL_HOST_USER = 'adeniyi.oluwajana@gmail.com'   # Enter your Gmail address
-EMAIL_HOST_PASSWORD = 'seyu tftg siio hsvc'   # Enter your app password
+EMAIL_HOST_PASSWORD = 'xxxxxxxx'   # Enter your app password
 
 
