@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#*1p5og0he(lw6*0+4u%bi95(6oc4n3%4ntro=o*o=(&2gmv5(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -45,12 +45,18 @@ INSTALLED_APPS = [
 
     'account',  #Django app
 
+    'payment',  #Django app
+
     'mathfilters',  #Django downloadedapp
 
     'crispy_forms',  #Django downloadedapp
 
     'crispy_bootstrap4',  #Django downloadedapp
 ]
+
+# To unblock PayPal popups 
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
 
@@ -135,7 +141,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/home/ubuntu/DEV/static/'
 
 STATICFILES_DIRS =[BASE_DIR / 'static']
 
@@ -147,3 +153,16 @@ MEDIA_ROOT = BASE_DIR / 'static/media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = 'True'
+
+
+# Be sure to read the guide in the resources folder of this lecture (SETUP THE EMAIL BACKEND)
+
+EMAIL_HOST_USER = 'adeniyi.oluwajana@gmail.com'   # Enter your Gmail address
+EMAIL_HOST_PASSWORD = 'seyu tftg siio hsvc'   # Enter your app password
+
+
